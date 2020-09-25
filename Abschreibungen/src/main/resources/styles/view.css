@@ -1,0 +1,90 @@
+/*This is the main theme*/
+.main-theme
+{
+    -fx-background-color: #3c6562;
+}
+
+.theme-radio
+{
+    -fx-border-color: #385c59;
+    -fx-border-width: 1; 
+    /*-fx-border-style: segments(10, 10, 10, 10);*/
+}
+
+/*title bar design*/
+.titlebar
+{
+    -fx-background-color: #00454a;
+    -fx-text-fill:  #bfdcae;
+    -fx-font-size: 28px;
+}
+
+.minimize
+{
+    -fx-background-color: inherit;
+}
+
+.exit
+{
+    -fx-background-color: inherit;
+    -fx-background-image: url("../images/exit.jpg");
+}
+
+.title
+{
+    -fx-font-size: 25px;
+    -fx-text-fill: #adc9bc;
+}
+
+/*this is the button design for the confirm button*/
+.btn-confirm
+{
+    -fx-background-color: #047880;
+    -fx-text-fill:  #bfdcae;
+    -fx-background-radius: 20px;
+    -fx-font-size: 17px;
+}
+
+/*this is the button design for the cancel button*/
+.btn-design
+{
+    -fx-background-color: #00454a;
+    -fx-text-fill:  #bfdcae;
+    -fx-background-radius: 20px;
+    -fx-font-size: 17px;
+}
+
+.input
+{
+    -fx-font-size: 20px;
+    -fx-text-fill: #659c96;
+}
+
+.table-view
+{
+    -fx-background-color: #3c6562;
+}
+
+
+.table-view .column-header-background
+{
+    -fx-background-color: #2d4e4b;
+    -fx-background-inserts: 0 0 10 0;
+    -fx-padding: 0 0 10 0;
+    /*-fx-effect: dropshadow(two-pass-box, red, blue);*/
+}
+
+
+.table-view .column-header, .table-view -filler
+{
+    -fx-size: 8;
+    -fx-border-width: 0 0 0 0;
+    -fx-border-color: white;
+    -fx-background-color: transparent;
+}
+
+.table-view .column-header .label
+{
+    -fx-text-fill: white;
+    -fx-font-size: 18;
+}

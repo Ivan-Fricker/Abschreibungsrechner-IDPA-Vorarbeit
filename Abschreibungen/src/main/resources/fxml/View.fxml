@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" styleClass="main-theme" stylesheets="@../styles/view.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.idpa.abschreibungen.View.View">
+    <children>
+      <Pane prefHeight="60.0" prefWidth="900.0" styleClass="titlebar">
+         <children>
+            <Label layoutX="25.0" layoutY="12.0" styleClass="titlebar" stylesheets="@../styles/view.css" text="Abschreibungsrechner" />
+            <ImageView fitHeight="40.0" fitWidth="70.0" layoutX="825.0" layoutY="10.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true" smooth="false">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="70.0" layoutX="750.0" layoutY="10.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minimize.png" />
+               </image>
+            </ImageView>
+         </children></Pane>
+      <Label layoutX="25.0" layoutY="240.0" styleClass="input" text="Nutzungsdauer (Jahre)" />
+      <Label layoutX="25.0" layoutY="360.0" styleClass="input" text="Restwert" />
+      <Label layoutX="25.0" layoutY="480.0" styleClass="input" text="Abschreibung in Prozent" />
+      <TextField fx:id="inputAnschaffungswert" layoutX="280.0" layoutY="120.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField fx:id="inputJahre" layoutX="280.0" layoutY="240.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField fx:id="inputRestwert" layoutX="284.0" layoutY="360.0" prefHeight="25.0" prefWidth="145.0" />
+      <TextField fx:id="inputAbschProzent" layoutX="284.0" layoutY="480.0" prefHeight="25.0" prefWidth="145.0" />
+      <Label layoutX="25.0" layoutY="120.0" styleClass="input" text="Anschaffungswert" />
+      <Button layoutX="520.0" layoutY="480.0" mnemonicParsing="false" onAction="#berechne" prefHeight="35.0" prefWidth="140.0" styleClass="btn-confirm" text="Berechnen" />
+      <Button layoutX="730.0" layoutY="480.0" mnemonicParsing="false" onAction="#abbrechen" prefHeight="35.0" prefWidth="140.0" styleClass="btn-design" text="Abbrechen" />
+      <Separator layoutX="480.0" layoutY="100.0" orientation="VERTICAL" prefHeight="370.0" prefWidth="1.0" />
+      <Separator layoutX="570.0" layoutY="410.0" prefHeight="1.0" prefWidth="280.0" AnchorPane.leftAnchor="570.0" AnchorPane.rightAnchor="79.6" />
+      <Pane layoutX="520.0" layoutY="150.0" prefHeight="80.0" prefWidth="350.0" styleClass="theme-radio">
+         <children>
+            <RadioButton fx:id="linear" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#isLinear" styleClass="input" text="Linear" />
+            <RadioButton fx:id="degressiv" layoutX="207.0" layoutY="14.0" mnemonicParsing="false" onAction="#isDegressiv" styleClass="input" text="Degressiv" />
+            <Label fx:id="infoLinearDegressiv" layoutX="20.0" layoutY="52.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="520.0" layoutY="280.0" prefHeight="80.0" prefWidth="350.0" styleClass="theme-radio">
+         <children>
+            <RadioButton fx:id="direkt" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#isDirekt" styleClass="input" text="Direkt" />
+            <RadioButton fx:id="indirekt" layoutX="207.0" layoutY="14.0" mnemonicParsing="false" onAction="#isIndirekt" styleClass="input" text="Indirekt" />
+            <Label fx:id="infoDirektIndirekt" layoutX="20.0" layoutY="52.0" />
+         </children>
+      </Pane>
+      <Label fx:id="infoAnschaffungsWert" layoutX="25.0" layoutY="160.0" />
+      <Label fx:id="infoNutzungsdauer" layoutX="25.0" layoutY="280.0" />
+      <Label fx:id="infoRestwert" layoutX="25.0" layoutY="400.0" />
+      <Label fx:id="infoAbschreibung" layoutX="25.0" layoutY="520.0" />
+   </children>
+</AnchorPane>

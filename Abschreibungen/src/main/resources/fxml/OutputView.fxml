@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="900.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ch.bbbaden.idpa.abschreibungen.View.OutputView">
+    <stylesheets>
+        <URL value="@/styles/view.css" />
+    </stylesheets>
+   <children>
+      <ScrollPane layoutY="35.0" prefHeight="448.0" prefWidth="900.0" styleClass="main-theme" stylesheets="@../styles/view.css" AnchorPane.topAnchor="60.0">
+         <content>
+            <TableView fx:id="ausgaben" editable="true" prefHeight="445.6" prefWidth="897.6">
+              <columns>
+                <TableColumn fx:id="colJahr" prefWidth="70.0" text="Jahr" />
+                <TableColumn fx:id="colAbschreibung" prefWidth="160.53329467773438" text="Abschreibung" />
+                  <TableColumn fx:id="colRWAnlagekonto" prefWidth="209.86668395996094" text="Restwert Anlagekonto" />
+                  <TableColumn fx:id="colBetragWBKonto" prefWidth="179.46670532226562" text="Betrag WB-Konto" />
+                  <TableColumn fx:id="colRWNachNutzDauer" prefWidth="275.1999755859375" text="Restwert nach Nutzungsdauer" />
+              </columns>
+            </TableView>
+         </content>
+      </ScrollPane>
+      <Pane prefHeight="60.0" prefWidth="900.0" styleClass="titlebar" stylesheets="@../styles/view.css">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="70.0" layoutX="750.0" layoutY="10.0" onMouseClicked="#minimize" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/minimize.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="40.0" fitWidth="70.0" layoutX="825.0" layoutY="10.0" onMouseClicked="#exit" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/exit.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="25.0" layoutY="12.0" styleClass="titlebar" text="Abschreibungsrechner" />
+         </children></Pane>
+      <Pane prefHeight="92.9" prefWidth="900.0" styleClass="main-theme" stylesheets="@../styles/view.css" AnchorPane.bottomAnchor="0.0">
+         <children>
+            <Button layoutX="735.0" layoutY="25.0" mnemonicParsing="false" onAction="#neuBerechnen" styleClass="btn-confirm" stylesheets="@../styles/view.css" text="Neu berechnen" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
